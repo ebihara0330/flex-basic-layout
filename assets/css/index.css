@@ -1,0 +1,248 @@
+/* ******************************************************************
+ * 	title:
+ *		・共通のCSS定義ファイル
+ *		
+ *	overView:
+ *		・複数の画面で使用するデザイン定義を記載する
+ * 
+ * ******************************************************************/
+
+ /* -----------------------------------------------------------------
+  * 基本的な画面構成
+  * ----------------------------------------------------------------- */
+
+  body {
+	background-color: #F0F0F0;
+	height: 100vh; 
+	width: 100%;
+	overflow: hidden;
+  }
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+ /* -----------------------------------------------------------------
+  * アクションバーコンポーネント
+  * ----------------------------------------------------------------- */
+
+
+.actionBar {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	height: 50px;
+	background: #808080
+}
+
+.image {
+	display: flex;
+	padding: 10px;
+	color: #f5f5f5
+}
+
+.actionBarContents {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.logoutButton {
+	margin: 5px;
+	padding: 10px;
+	font-size: 15px;
+	border-radius: 10px;
+	background: #d3d3d3;
+}
+
+
+ /* -----------------------------------------------------------------
+  * メニューコンポーネント
+  * ----------------------------------------------------------------- */
+
+.acordion {
+	height:94%;
+	padding: 40px;
+	text-align: left;
+	text-decoration: underline;
+	background: #a9a9a9;
+	color:#f5f5f5;
+}
+
+.footer {
+	height:12%;
+	color: #545454;
+	text-align: left;
+}
+
+
+ /* -----------------------------------------------------------------
+  * バナー
+  * ----------------------------------------------------------------- */
+
+.topBanner {
+	position: relative;
+	width: 100%;
+	color: #2F3131;
+	height: 20vw;
+	border: 0.1px solid
+}
+
+.mainImage {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+
+ /* -----------------------------------------------------------------
+  * タイルリスト
+  * ----------------------------------------------------------------- */
+
+
+.contentsContainer {
+	display: flex;
+	width: 100%;
+	height: 20vw; 
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.contentsTitle {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	padding-left: 40px;
+	width: 100%;
+	min-height: 12%;
+	text-align: left;
+	font-size: 20px;
+	color: #2F3131;
+}
+
+.contentsList {
+	width: 100%;
+	height: 65vh; 
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.innerContentsList {
+	overflow-y: auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-bottom: 100px;
+	padding-left: 20px;
+}
+
+
+
+ /* -----------------------------------------------------------------
+  * タイルのデザイン＆タイル選択時の制御
+  * ----------------------------------------------------------------- */
+
+.baseContainer {
+	display: flex;
+	height:100%;
+}
+
+.menuContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height:100%;
+	width: 33%;
+}
+
+.card {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	width: 20%;
+	height: 20vw;
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	margin: 20px;
+}
+
+.card-img {
+	width: 100%;
+	max-height: 9vw;
+	overflow: hidden;
+	height: 160px;
+}
+
+.card-body {
+	padding: 15px;
+	background-color: #fff;
+}
+
+.card-title {
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #808080;
+	text-align: left;
+}
+
+.card-text {
+	color: #808080;
+	height: 11vw;
+	text-align: left;
+}
+
+ /* -----------------------------------------------------------------
+  * メニュー選択時の制御
+  * ----------------------------------------------------------------- */
+
+.ul {
+	font: menu;
+	font-size: 24px;
+	padding:10px;
+	margin:5px;
+}
+
+.ul.closed {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	transition: padding 1.0s ease, margin 1.0s ease;
+}
+
+.ul:hover {
+	background: rgba(0,0,0,0.2);
+	box-shadow: inset 0 -1px rgba(0,0,0,0);
+	box-shadow: #ffffff;
+	cursor: pointer;
+}
+
+.ul li {
+	list-style: none;
+	position: relative;
+	margin-left:10px;
+}
+
+.ul li a {
+	width: 100%;
+}
+
+.ul li ul {
+	margin-top:5px;
+	margin-left:25px;
+	margin-right:10px;
+}
+
+.ul li li {
+	height: 0;
+	overflow: hidden;
+	transition: 1s;
+}
+
+.ul li:hover > ul > li {
+	height: 2.2rem;
+	overflow: visible;
+}
